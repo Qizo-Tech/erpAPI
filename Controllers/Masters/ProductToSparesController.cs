@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using qizoErpApi.Models;
 using qizoErpWebApiApp.Model.Masters;
 
@@ -60,7 +57,7 @@ namespace qizoErpWebApiApp.Controllers.Masters
                           join itm in _context.MItemMaster on pts.PtsProductId equals itm.Id
                           join itmspare in _context.MItemMaster on pts.PtsSpareId equals itmspare.Id
                           let productName = pts.PtsProduct.ItmName
-                          let sapareName = pts.PtsSpare.ItmName
+                          let sapareNameNew = pts.PtsSpare.ItmName
                           where pts.PtsProductId == id
                           orderby pts.Id
                           select new
@@ -69,7 +66,7 @@ namespace qizoErpWebApiApp.Controllers.Masters
                               pts.PtsProductId,
                               productName,
                               pts.PtsSpareId,
-                              sapareName,
+                              sapareNameNew,
                               pts.PtsUserId,
                               pts.PtsBranchId
                           }).ToList();
