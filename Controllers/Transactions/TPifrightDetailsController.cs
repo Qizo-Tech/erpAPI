@@ -28,7 +28,7 @@ namespace qizoErpWebApiApp.Controllers.Transactions
             var result = (from fright in _context.TPifrightDetails 
                           join fritParty in _context.MLedgerHeads on fright.PifFrightParyId equals fritParty.Id 
                           join shipLinePrty in _context.MShippingLine  on fright.PifShippingLineParyId  equals shipLinePrty.Id
-                          
+                          let EstimatedArrival = fright.PifEta 
 
                           select new
                           {
@@ -43,7 +43,8 @@ namespace qizoErpWebApiApp.Controllers.Transactions
                               fright.PifRoute,
                               fright.PifRouteDescription,
                               fright.PifEta,
-                              fright.PifFrigthAmount
+                              fright.PifFrigthAmount,
+                              EstimatedArrival
                           }).ToList();
             return Ok(result);
             //return await _context.TPifrightDetails.ToListAsync();
