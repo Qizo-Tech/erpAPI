@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Angular\\erpAPIgithub\\erpAPI\\qizoErpWebApiApp.csproj": {}
+    "E:\\Angular\\GitHupTestMarch17\\erpAPI\\qizoErpWebApiApp.csproj": {}
   },
   "projects": {
-    "E:\\Angular\\erpAPIgithub\\erpAPI\\qizoErpWebApiApp.csproj": {
+    "E:\\Angular\\GitHupTestMarch17\\erpAPI\\qizoErpWebApiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Angular\\erpAPIgithub\\erpAPI\\qizoErpWebApiApp.csproj",
+        "projectUniqueName": "E:\\Angular\\GitHupTestMarch17\\erpAPI\\qizoErpWebApiApp.csproj",
         "projectName": "qizoErpWebApiApp",
-        "projectPath": "E:\\Angular\\erpAPIgithub\\erpAPI\\qizoErpWebApiApp.csproj",
-        "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
-        "outputPath": "E:\\Angular\\erpAPIgithub\\erpAPI\\obj\\",
+        "projectPath": "E:\\Angular\\GitHupTestMarch17\\erpAPI\\qizoErpWebApiApp.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Angular\\GitHupTestMarch17\\erpAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -94,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

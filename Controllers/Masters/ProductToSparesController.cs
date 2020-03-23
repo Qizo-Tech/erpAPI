@@ -38,21 +38,40 @@ namespace qizoErpWebApiApp.Controllers.Masters
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductToSpare>> GetProductToSpare(int id)
         {
+            //var result = (from pts in _context.ProductToSpare
+            //              join itm in _context.MItemMaster on pts.PtsProductId equals itm.Id
+            //              join itmspare in _context.MItemMaster on pts.PtsSpareId equals itmspare.Id
+            //              where pts.PtsProductId == id
+            //              select new
+            //              {
+            //                  pts.Id,
+            //                  pts.PtsProductId,
+            //                  pts.PtsProduct.ItmName,
+            //                  pts.PtsSpareId,
+            //                  pts.PtsSpare.ItmDescription,
+            //                  pts.PtsProduct.ItmCode,
+            //                  pts.PtsUserId,
+            //                  pts.PtsBranchId
+
+            //              }).ToList();
+            //return (Ok(result));
+
             var result = (from pts in _context.ProductToSpare
                           join itm in _context.MItemMaster on pts.PtsProductId equals itm.Id
                           join itmspare in _context.MItemMaster on pts.PtsSpareId equals itmspare.Id
+                          let productName = pts.PtsProduct.ItmName
+                          let sapareName = pts.PtsSpare.ItmName
                           where pts.PtsProductId == id
+                          orderby pts.Id
                           select new
                           {
                               pts.Id,
                               pts.PtsProductId,
-                              pts.PtsProduct.ItmName,
+                              productName,
                               pts.PtsSpareId,
-                              pts.PtsSpare.ItmDescription,
-                              pts.PtsProduct.ItmCode,
+                              sapareName,
                               pts.PtsUserId,
                               pts.PtsBranchId
-
                           }).ToList();
             return (Ok(result));
 
